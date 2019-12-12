@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <title>Simple Text Summarizer</title>
+  <meta content="">
+  <style>
+  div.all_text {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;}
+
+  </style>
+</head>
+
+<body >
+    <div class="all_text">
+    
+      <h1>Text Summarizer </h1><br>
+      <form method=post action="">
+        <table align="center" >
+          {% for field in form %}
+          <tr>
+            <td>{{ field.label }}</td>
+            <td>{{ field }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p><input type=submit value=Submit>
+      </form><br></p>
+    
+      <p>
+        {% if prediction != None %}
+        <h1>Original Text </h1><br>        
+        <p> {{text}} </p>
+        <h1>Summary </h1><br>        
+        <p> {{prediction}} </p>
+        {% endif %}
+      </p>
+    
+    </div>
+
+</body>
+
+</html>
