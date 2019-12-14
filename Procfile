@@ -1,1 +1,1 @@
-heroku ps:scale web=1
+web: gunicorn Simple_summarizer:app --log-file -
