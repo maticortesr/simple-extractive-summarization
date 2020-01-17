@@ -9,7 +9,7 @@ class InputForm(Form):
         label='Ratio (0.1-0.99)', default=0.3,
         validators=[validators.InputRequired(), validators.NumberRange(0.1,0.99,'Ratio must be between 0.1 and 0.99')])
     text = TextAreaField(
-        label='Text', default='',
+        label='Text (e.g.: an article from npr.org)', default='',
         validators=[validators.InputRequired(),validators.Length(100, message="Text must be at least 100 characters")]
     )
 
