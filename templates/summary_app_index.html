@@ -1,6 +1,16 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120795861-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120795861-2');
+</script>
+
   <title>Simple Text Summarizer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,10 +41,9 @@
   </ul>
 </nav>
 
-
 <body >
-    <div class="all_text">
-    
+
+    <div class="all_text">   
         
       {% for message in form.ratio.errors %}
       <div>{{ message }}</div> <br>
@@ -54,8 +63,8 @@
           </tr>
           {% endfor %}
         </table></br>
-        <p><input type=submit value=Summarize>
-      </form><br></p>
+        
+        <p><input class="" type=submit value=Summarize></form><br></p>
     
     </div>
 
